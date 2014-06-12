@@ -4,3 +4,37 @@ git push
 
 git push heroku
 heroku run rake db:migrate
+
+******
+
+At this point, if you are using Git you should merge the changes back into the master branch:
+
+$ git add .
+$ git commit -m "Finish layout and routes"
+$ git checkout master
+$ git merge filling-in-layout
+
+You can also push up to GitHub:
+
+$ git push
+
+Finally, you can deploy to Heroku:
+
+$ git push heroku
+
+The result should be a working sample application on the production server:
+
+$ heroku open
+
+If you run into trouble, try running
+
+$ heroku logs
+
+to debug the error using the Heroku logfile.
+
+GIT
+====
+$ git checkout master			# make sure that you start on the master branch,
+$ git checkout -b modeling-users # new branch modeling-users based on master
+
+$ git push --set-upstream origin modeling-users # ???
